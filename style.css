@@ -1,0 +1,69 @@
+:root {
+  --tdf-yellow: #FFD100;
+  --tdf-black: #1D1D1B;
+  --tdf-green: #00A651;
+}
+
+body {
+  background-color: var(--tdf-yellow);
+  color: var(--tdf-black);
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-card {
+  background-color: #ffffff;
+  border: 4px solid var(--tdf-black);
+  border-radius: 16px;
+  box-shadow: 8px 8px 0px var(--tdf-black);
+}
+
+.tour-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.btn-tour {
+  background-color: var(--tdf-black);
+  color: var(--tdf-yellow);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--tdf-black);
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-tour:hover {
+  background-color: #ffffff;
+  color: var(--tdf-black);
+  border-color: var(--tdf-black);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.swal2-popup {
+  border: 3px solid var(--tdf-black) !important;
+  border-radius: 16px !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.swal2-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+}
+
+.swal2-confirm {
+  background-color: var(--tdf-yellow) !important;
+  color: var(--tdf-black) !important;
+  font-weight: bold !important;
+  border: 2px solid var(--tdf-black) !important;
+  box-shadow: 3px 3px 0px var(--tdf-black) !important;
+}
