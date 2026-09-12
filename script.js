@@ -27,20 +27,23 @@ const mensajes = [
 ];
 
 function mostrarMensaje(index) {
-  if (index >= mensajes.length) return;
-
   const m = mensajes[index];
+  const esUltimo = index === mensajes.length - 1;
 
   Swal.fire({
     title: m.titulo,
     text: m.texto,
     iconHtml: `<span style="font-size: 2.5rem;">${m.icono}</span>`,
-    confirmButtonText: index === mensajes.length - 1 ? "¡Te quiero! ❤️" : "Siguiente etapa 🚴‍♂️ ➔",
+    confirmButtonText: esUltimo ? "¡Te quiero! ❤️" : "Siguiente etapa 🚴‍♂️ ➔",
     allowOutsideClick: false,
     allowEscapeKey: false
   }).then((result) => {
     if (result.isConfirmed) {
-      mostrarMensaje(index + 1);
+      if (esUltimo) {
+        window.location.href = "index.html";
+      } else {
+        mostrarMensaje(index + 1);
+      }
     }
   });
 }
